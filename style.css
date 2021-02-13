@@ -8,9 +8,13 @@
 /*.hidden{
     overflow: hidden;
 }*/
+@font-face {
+    font-family: "Myriad Pro Bold";
+    src: url("fonts/Myriad Pro Bold.ttf");
+}
 .centrado{
     height: 100vh;
-    background-color: rgb(212, 182, 182);
+    background-color: #82CAF1,#11AAD7,#3D7EC1  ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,10 +68,16 @@
         transform: translate(-50%, -50%) rotate(-360deg);
     }
 }
+.mainheader{
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
 body {
     color:black;
-    background: -prefix-linear-gradient(top, white,rgb(79, 186, 248));
-    background: linear-gradient(to bottom, white, rgb(79, 186, 248));
+    background: -prefix-linear-gradient(top, white,#82CAF1,#11AAD7,#3D7EC1);
+    background: linear-gradient(to bottom, white, #82CAF1,#11AAD7,#3D7EC1);
 }
 .navegacion{
     width: 1000px;
@@ -78,6 +88,7 @@ body {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: white;
+    font-family: "Myriad Pro Bold";
 }
 .navegacion ul{
     list-style: none;
@@ -89,14 +100,14 @@ body {
 .menu > li > a{
     display: block;
     padding: 15px 20px;
-    color: brown;
-    font-weight: bold;
-    font-family: sans-serif;
+    color: #873831;
     text-decoration: none;
+    font-family: "Myriad Pro Bold";
 }
 .menu li a:hover{
     color: darkblue;
     transition: all .3s;
+    font-family: "Myriad Pro Bold";
 }
 .submenu{
     position: absolute;
@@ -105,24 +116,31 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: opacity 1.5s;
+    font-family: "Myriad Pro Bold";
 }
 
 .submenu li a{
     display: block;
     padding: 15px;
-    color: brown;
-    font-family: sans-serif;
+    color: #873831;
+    font-family: "Myriad Pro Bold";
     text-decoration: none;
 }
 
 .menu li:hover .submenu{
     visibility: visible;
     opacity: 1;
+    font-family: "Myriad Pro Bold";
 
 }
+.logo{
+    margin-bottom: -20px;
+    width: 200px;
+    height: 50px;
+}
 .imga{
-    width: 1000px;
-    height:800px;
+    width: 1500px;
+    height:600px;
 }
 .slider{
     width: 95%;
@@ -132,8 +150,19 @@ body {
 .slider ul{
     display: flex;
     padding: 0;
-    width: 400%;
+    width: 100%;
+    animation: cambio 20s infinite;
 }
 .slider li{
     width: 100%;
+}
+@keyframes cambio {
+    0% { margin-left: 0;}
+    20% { margin-left: 0;}
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+    75% { margin-left: -300%; }
+    100% { margin-left: -300%; }
 }
